@@ -124,7 +124,7 @@ void blood(){
   }
   
   textSize(64);
-  text("Creado por:\nAndrés Felipe Aparicio Mestre\nEmmanuel López Rodríguez\nMaria Paula Duque Muñoz", width/2, descent-350);
+  text("Creado por:\nAndres Felipe Aparicio Mestre\nEmmanuel Lopez Rodriguez\nMaria Paula Duque Muñoz", width/2, descent-350);
   descent += 10;
 }
 
