@@ -10,6 +10,7 @@ float noiseScale = 0.0035;
 float descent = -100;
 int numberSpirals = 3;
 float alphaColor = 0;
+char[] bond = { 'B', 'O', 'N', 'D',  ' ' };
 
 void setup(){
   fullScreen(1);
@@ -17,6 +18,8 @@ void setup(){
   frameRate(30);
   y=height/2;
   strokeWeight(4);
+  textSize(128);
+  textAlign(CENTER, CENTER);
 }
 
 void draw(){
@@ -67,7 +70,7 @@ void draw(){
       }
       
       alphaColor += 25;
-      x-=5;   
+      x-=5;
       fill(255);
     stroke(0);
     ellipse(x, y, 150*grow, 150*grow);
@@ -105,8 +108,9 @@ void refresh(){
     } else{ 
       fill(0);
     }
-    ellipse((width/totalCircles*i) , circlesY[i], 150, 150);  
-    
+    ellipse((width/totalCircles*i) , circlesY[i], 150, 150);
+    fill(0);
+    text(bond[i-1], (width/totalCircles*i), circlesY[i]-25); 
     }
       
 }
@@ -117,8 +121,11 @@ void blood(){
       float noiseVal = noise((x)*noiseScale, noiseScale);
       stroke(255,0,0,90);
       line(x, 0, x, noiseVal*200+descent);
-    }
-    descent+=10;
+  }
+  
+  textSize(64);
+  text("Creado por:\nAndrés Felipe Aparicio Mestre\nEmmanuel López Rodríguez\nMaria Paula Duque Muñoz", width/2, descent-350);
+  descent += 10;
 }
 
 // Espiral hiperbólica
