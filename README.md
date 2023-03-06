@@ -12,7 +12,7 @@
 ## Vídeo
 https://user-images.githubusercontent.com/45053254/223226524-592b5206-9118-4a4b-b4e7-4c0714938a9c.mp4
 
-##Instrucciones
+## Instrucciones
 Para correr el proyecto en tu equipo y que se observe correctamente, debes descargar los archivos noise_bond.pde y bondfont.ttf y guardarlos en una misma carpeta. El primer archivo corresponde al codigo fuente del proyecto en processing y el segundo es la tipología de letra que utiliza el proyecto
 
 ## Inspiración
