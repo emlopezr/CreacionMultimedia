@@ -10,7 +10,8 @@ float noiseScale = 0.0035;
 float descent = -100;
 int numberSpirals = 3;
 float alphaColor = 0;
-char[] bond = { 'B', 'O', 'N', 'D',  ' ' };
+char[] bond = { '0', '0', '7', '*',  ' ' };
+PFont bondFont;
 
 void setup(){
   fullScreen(1);
@@ -18,8 +19,11 @@ void setup(){
   frameRate(30);
   y=height/2;
   strokeWeight(4);
-  textSize(128);
+  textSize(192);
   textAlign(CENTER, CENTER);
+  
+  bondFont = createFont("bondFont.ttf", 192);
+  textFont(bondFont);
 }
 
 void draw(){
@@ -110,7 +114,7 @@ void refresh(){
     }
     ellipse((width/totalCircles*i) , circlesY[i], 150, 150);
     fill(0);
-    text(bond[i-1], (width/totalCircles*i), circlesY[i]-25); 
+    text(bond[i-1], (width/totalCircles*i), circlesY[i]); 
     }
       
 }
@@ -123,8 +127,8 @@ void blood(){
       line(x, 0, x, noiseVal*200+descent);
   }
   
-  textSize(64);
-  text("Creado por:\nAndres Felipe Aparicio Mestre\nEmmanuel Lopez Rodriguez\nMaria Paula Duque Muñoz", width/2, descent-350);
+  textSize(96);
+  text("Creado por *\nAndres Felipe Aparicio Mestre *\nEmmanuel Lopez Rodriguez *\nMaria Paula Duque Munoz *", width/2, descent-350);
   descent += 10;
 }
 
