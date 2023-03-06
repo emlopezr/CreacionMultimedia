@@ -6,15 +6,17 @@ int circles = 0 ;
 int totalCircles = 6;
 float[] circlesY = new float[totalCircles];
 boolean turnBack = false;
-float noiseScale = 0.004;
-float descent = 0;
+float noiseScale = 0.0035;
+float descent = -100;
+int numberSpirals = 3;
+float alphaColor = 0;
 
 void setup(){
   fullScreen(1);
   background(0);
   frameRate(30);
-  curveTightness(-3);
   y=height/2;
+  strokeWeight(4);
 }
 
 void draw(){
@@ -57,12 +59,14 @@ void draw(){
     
     // Factor de movimiento a la izquierda
     if(x>=width/2 && grow>=2){
-      stroke(255);
+      stroke(255, alphaColor);
       fill(0,0);
-      curve(0, height/2, x, y+150*grow/2, width, 0, width, 0);
-      //curve(100, 100, x+150*grow/2, y, 0, 0, 300, 500);
-      //curve(100, 100, x, y-150*grow/2, 0, height, 300,500);
-      //curve(100, 100, x-150*grow/2, y, width, height, 300,500);
+      
+      for (int s = -numberSpirals; s <= numberSpirals; s++) {
+        drawSpiral(1200*s, 500, x, y);
+      }
+      
+      alphaColor += 25;
       x-=5;   
       fill(255);
     stroke(0);
@@ -71,15 +75,15 @@ void draw(){
     else if(grow>=2){
       stroke(255);
       fill(0,0);
-      curve(0, height/2, x, y+150*grow/2, width, 0, width, 0);
+      
+      for (int s = -numberSpirals; s <= numberSpirals; s++) {
+        drawSpiral(1200*s, 500, x, y);
+      }
+      
       fill(255);
       stroke(0);
       ellipse(x, y, 150*grow, 150*grow);
       blood();
-      
-      //curve(100, 100, x+150*grow/2, y, 0, 0, 300,500);
-      //curve(100, 100, x, y-150*grow/2, 0, height, 300,500);
-      //curve(100, 100, x-150*grow/2, y, width, height, 300,500);
     }
     //Factor de crecimiento
     else if(grow<2)
@@ -88,9 +92,7 @@ void draw(){
       fill(255);
     stroke(0);
     ellipse(x, y, 150*grow, 150*grow);
-    }
-    
-    
+    } 
   }
 }
 
@@ -110,10 +112,40 @@ void refresh(){
 }
 
 void blood(){
-for (int x=0; x < width; x++) {
-    float noiseVal = noise((x)*noiseScale, noiseScale);
-    stroke(255,0,0,90);
-    line(x, 0, x, noiseVal*200+descent);
+  strokeWeight(4);
+  for (int x=0; x < width; x += 4) {
+      float noiseVal = noise((x)*noiseScale, noiseScale);
+      stroke(255,0,0,90);
+      line(x, 0, x, noiseVal*200+descent);
+    }
+    descent+=10;
+}
+
+// Espiral hiperbólica
+void drawSpiral(float a, int totalPoints, float centerX, float centerY){
+  // Para guardar coordenadas de la curva polar
+  float[][] pointsSpiral = new float[totalPoints][2];
+  float theta = 0;
+  float x, y;
+  
+  // Generar coordenadas usando la formula: https://en.wikipedia.org/wiki/Hyperbolic_spiral
+  for (int i=0; i<totalPoints; i++){
+    theta += 0.5;
+    x = centerX + a* cos(theta)/theta;
+    y = centerY + a* sin(theta)/theta;
+    
+    // Guardar las coordenadas
+    pointsSpiral[i][0] = x;
+    pointsSpiral[i][1] = y;
   }
-  descent+=20;
+
+  // Dibujar la curva generada
+  noFill();
+  beginShape();
+  curveVertex(pointsSpiral[0][0],  pointsSpiral[0][1]);
+  for (int j=0; j<totalPoints; j++){
+    curveVertex(pointsSpiral[j][0],  pointsSpiral[j][1]);
+  }
+  curveVertex(pointsSpiral[totalPoints-1][0],  pointsSpiral[totalPoints-1][1]);
+  endShape();
 }
