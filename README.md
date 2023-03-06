@@ -10,7 +10,7 @@
 - Maria Paula Duque Muñoz - [maduquem@unal.edu.co](mailto:maduquem@unal.edu.co)
 
 ## Vídeo
-*Poner aquí*
+https://user-images.githubusercontent.com/45053254/223226524-592b5206-9118-4a4b-b4e7-4c0714938a9c.mp4
 
 ## Inspiración
 *Poner aquí*
