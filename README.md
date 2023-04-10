@@ -1,5 +1,4 @@
-# Proyecto Generacion de Imagenes
-- **Materia:** Creación Multimedia
+# Creación Multimedia
 - **Profesor:** Santiago Alvarez
 - **Institución:** Universidad Nacional de Colombia sede Medellín
 - **Semestre:** 2023-1
@@ -9,7 +8,7 @@
 - Emmanuel López Rodríguez - [emlopezr@unal.edu.co](mailto:emlopezr@unal.edu.co)
 - Maria Paula Duque Muñoz - [maduquem@unal.edu.co](mailto:maduquem@unal.edu.co)
 
-## Vídeo
+# Proyecto 1
 https://user-images.githubusercontent.com/45053254/223226524-592b5206-9118-4a4b-b4e7-4c0714938a9c.mp4
 
 ## Instrucciones
@@ -20,5 +19,7 @@ Este proyecto esta inspirado en la Gun Barrel Sequence o secuencia del cañon de
 
 Quisimos recrear esta icónica y compleja secuencia, desarrollando nuestra propia versión con algunos cambios y dejando nuestros nombres plasmados, dando inicio a nuestra propia película. Quisimos darle cierta aleatoriedad a los pasos de bond y el manto de sangre, tal que cada ejecución del código da una secuencia diferente.
 
-El siguiente video es una recopilación de todas las secuecias de cañon presentadas hasta la actualidad: https://www.youtube.com/watch?v=3TAMEgqT6T0
+El siguiente video es una recopilación de todas las secuecias de cañon presentadas hasta la actualidad: [EVERY James Bond Gunbarrel Sequence 1962-2021](https://www.youtube.com/watch?v=3TAMEgqT6T0)
 
+# Proyecto 2
+https://user-images.githubusercontent.com/45053254/230806136-5e238fe4-c92f-4a4c-b4bf-2e8404fe5dce.mp4
