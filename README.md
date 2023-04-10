@@ -21,5 +21,22 @@ Quisimos recrear esta icónica y compleja secuencia, desarrollando nuestra propi
 
 El siguiente video es una recopilación de todas las secuecias de cañon presentadas hasta la actualidad: [EVERY James Bond Gunbarrel Sequence 1962-2021](https://www.youtube.com/watch?v=3TAMEgqT6T0)
 
-# Proyecto 2
+# Reserach and Development
 https://user-images.githubusercontent.com/45053254/230806136-5e238fe4-c92f-4a4c-b4bf-2e8404fe5dce.mp4
+
+# Proyecto 2
+https://user-images.githubusercontent.com/45053254/230966131-d5c654f6-9cd9-4c07-8901-3cbdeb4ad20a.mp4
+
+## Instrucciones
+Para correr el proyecto en tu equipo y que se observe correctamente, debes descargar la carpeta "Proyecto 2".
+
+1. Si es neecsario, abrir el programa de interfaz MIDI (En este caso, utilizamos [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html))
+2. Abrir el programa que se encarga de tocar las notas que llegan por medio del MIDI. Para este proyecto utilizamos el programa de código abierto [LMMS](https://lmms.io/) y dentro de este, usamos el sintetizador [NEScaline](https://docs.lmms.io/user-manual/5-built-in-instruments/5.9-nescaline) con sus ajustes predeterminados. En la entrada del sintetizador, poner "loopMIDI"
+3. Abrir el archivo "audio.pd" con [Pure Data](https://puredata.info/), encenter el interruptor de arriba en el centro y dar click en el objeto "connect localhost 3434". En las preferencias del programa, configurar la salida MINI como "loopMIDI"
+4. Abrir la carpeta del proyecto con [Processing](https://processing.org/) y correr el archivo "superMario.pde"
+5. Probar el proyecto encendiendo y apagando los otros interruptores, cada uno de ellos para un tono y acción específicas
+
+## Inspiración
+Este proyecto es una recreación del clásico videojuego Super Mario Bros 1 utilizando Processing y PureData. Super Mario Bros 1 es un videojuego de plataformas desarrollado y publicado por Nintendo en 1985 para la consola NES. El juego es considerado uno de los títulos más influyentes y exitosos de la historia de los videojuegos.
+
+El objetivo del proyecto es la conexión de Processing y PureData por medio de mensajes OSC. Los sprites del juego original de 1985 fueron recuperados de la página [The Spriters Resource](https://www.spriters-resource.com/nes/supermariobros/) y fueron recortados y adecuados por nosotros.
