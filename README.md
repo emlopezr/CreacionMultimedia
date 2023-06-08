@@ -30,7 +30,7 @@ https://user-images.githubusercontent.com/45053254/230966131-d5c654f6-9cd9-4c07-
 ## Instrucciones
 Para correr el proyecto en tu equipo y que se observe correctamente, debes descargar la carpeta "Proyecto 2".
 
-1. Si es neecsario, abrir el programa de interfaz MIDI (En este caso, utilizamos [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html))
+1. Si es necesario, abrir el programa de interfaz MIDI (En este caso, utilizamos [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html))
 2. Abrir el programa que se encarga de tocar las notas que llegan por medio del MIDI. Para este proyecto utilizamos el programa de código abierto [LMMS](https://lmms.io/) y dentro de este, usamos el sintetizador [NEScaline](https://docs.lmms.io/user-manual/5-built-in-instruments/5.9-nescaline) con sus ajustes predeterminados. En la entrada del sintetizador, poner "loopMIDI"
 3. Abrir el archivo "audio.pd" con [Pure Data](https://puredata.info/), encenter el interruptor de arriba en el centro y dar click en el objeto "connect localhost 3434". En las preferencias del programa, configurar la salida MINI como "loopMIDI"
 4. Abrir la carpeta del proyecto con [Processing](https://processing.org/) y correr el archivo "superMario.pde"
@@ -40,3 +40,16 @@ Para correr el proyecto en tu equipo y que se observe correctamente, debes desca
 Este proyecto es una recreación del clásico videojuego Super Mario Bros 1 utilizando Processing y PureData. Super Mario Bros 1 es un videojuego de plataformas desarrollado y publicado por Nintendo en 1985 para la consola NES. El juego es considerado uno de los títulos más influyentes y exitosos de la historia de los videojuegos.
 
 El objetivo del proyecto es la conexión de Processing y PureData por medio de mensajes OSC. Los sprites del juego original de 1985 fueron recuperados de la página [The Spriters Resource](https://www.spriters-resource.com/nes/supermariobros/) y fueron recortados y adecuados por nosotros.
+
+# Proyecto 3
+*poner video acá*
+
+## Instrucciones
+1. Importar las librerías necesarias dentro de Processing.
+2. Asegúrate de tener una cámara conectada a tu computadora.
+3. Haz clic dentro de la ventana de captura de la cámara a un color que servirá como referencia. Se recomienda que este sea verde, debido a que este color no corresponde con ningún tono de piel o color de cabello natural, lo que disminuye errores en la captura)
+4. Si mueves ese color en el eje vertical, se ajusta la velocidad de reproducción de la canción y la velocidad de aparición de partículas.
+5. Si mueves ese color color en el eje horizontal, modifica el balance de sonido (panning) de las canciones que se están reproduciendo simultáneamente. Por un lado, se ajustará el balance en un cover metal de la canción, y por otro lado, en la versión original.
+
+## Inspiración
+*poner inspiración acá*
