@@ -83,14 +83,19 @@ void draw() {
       strokeWeight(2.0);
       stroke(trackColor);
       ellipse(width-avgX, avgY, 16, 16);
-      for (int i = 0; i < particles.length; i++) {
-        speed = 5*((height-avgY)/height);
-        particles[i].setSpeed(speed);
-      }
+      
       original.rate(2*(height-avgY)/height);
       original.pan(-1*map(width-avgX, 0, width, -1.0, 1.0));
       metal.rate(2*(height-avgY)/height);
-      metal.pan(-1*map(width-avgX, 0, width, 1.0, -1.0));
+      metal.pan(map(width-avgX, 0, width, -1.0, 1.0));
+      
+      for (int i = 0; i < particles.length; i++) {
+        speed = 5*((height-avgY)/height);
+        particles[i].setSpeed(speed);
+        particles[i].setGray(avgX);
+        
+      }
+      
     }
   }
   else {

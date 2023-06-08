@@ -4,6 +4,8 @@ class Particle {
   
   float vx;
   float vy;
+  
+  float grayScale;
 
   Particle(float initSpeed) {
     x = width/2;
@@ -19,17 +21,30 @@ class Particle {
     this.vx = cos(a)*speed;
     this.vy = sin(a)*speed;
   }
+  
+  void setGray(float xGray){
+    if(xGray>x){
+      grayScale = xGray-x;
+      color c = cam.get(int(x),int(y));
+    fill(c,100-100*(grayScale/width));
+    }
+    else{
+      grayScale = x-xGray;
+      color c = cam.get(int(x),int(y));
+    fill(c,100-100*(grayScale/width));
+    }
+  }
 
   void display() {
     noStroke();
     color c = cam.get(int(x),int(y));
-    fill(c,25);
+    fill(c,100-100*(grayScale/width));
     ellipse(width-x, y, 12, 12);
-    
-
   }
 
   void move() {
+    color c = cam.get(int(x),int(y));
+    fill(c,100-100*(grayScale/width));
     x = x + vx;//random(-5, 5);
     y = y + vy;//random(-5, 5);
     if (y < 0) {
