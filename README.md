@@ -42,7 +42,7 @@ Este proyecto es una recreación del clásico videojuego Super Mario Bros 1 util
 El objetivo del proyecto es la conexión de Processing y PureData por medio de mensajes OSC. Los sprites del juego original de 1985 fueron recuperados de la página [The Spriters Resource](https://www.spriters-resource.com/nes/supermariobros/) y fueron recortados y adecuados por nosotros.
 
 # Proyecto 3
-*poner video acá*
+https://github.com/lopezemmanuel/CreacionMultimedia/assets/45053254/6ba0ce80-3b77-4c51-818b-ce70c023300c
 
 ## Instrucciones
 1. Importar las librerías necesarias dentro de Processing.
