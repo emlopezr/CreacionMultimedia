@@ -52,4 +52,4 @@ https://github.com/lopezemmanuel/CreacionMultimedia/assets/45053254/bf79117e-80a
 5. Si mueves ese color color en el eje horizontal, modifica el balance de sonido (panning) de las canciones que se están reproduciendo simultáneamente. Por un lado, se ajustará el balance en un cover metal de la canción, y por otro lado, en la versión original.
 
 ## Inspiración
-*poner inspiración acá*
+Este proyecto se inspira en el momento del ["blip"](https://es.wikipedia.org/wiki/El_Blip) de [Avengers: Infinity War](https://es.wikipedia.org/wiki/Avengers:_Infinity_War), pero de manera invertida. En lugar de desintegrarse en partículas, aquí las imágenes se forman a medida que las partículas se unen. Además, otra inspiración son los directores de orquesta, quienes influyen en la velocidad de una pieza musical mediante sus movimientos con la batuta. De manera similar, al ubicar el color seleccionado en una posición más alta, la música se acelera y por el contrario, al bajar el color, la música se ralentiza.
